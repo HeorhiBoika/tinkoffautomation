@@ -7,7 +7,7 @@ public class Data {
     public Data() {}
 
     public Data(String fileName) {
-        this.path = String .format(PATH_TMPL, fileName);
+        this.path = String.format(PATH_TMPL, fileName);
     }
 
     public String getPath() {
