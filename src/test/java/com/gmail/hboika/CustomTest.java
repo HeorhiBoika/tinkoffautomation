@@ -9,7 +9,6 @@ public class CustomTest extends BaseTest {
 
     @Test
     public void test(){
-        open();
         SimpleData simpleData = dataManager.get(DataType.SIMPLE, "Data");
         int c = 0;
     }

@@ -42,7 +42,6 @@ public abstract class Application {
 
     }
 
-
     private void setApplicationOpened(boolean status) {
         isApplicationOpened = status;
     }

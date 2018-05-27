@@ -15,7 +15,7 @@ public class DriverFactory {
 
 
     public WebDriver getDriver() {
-        String driverType = PropertyProvider.getProperty("driver").toLowerCase();
+        String driverType = PropertyProvider.getProperty(CustomProperties.BrowserProperties.BROWSER_TYPE).toLowerCase();
 
         switch (driverType) {
 
