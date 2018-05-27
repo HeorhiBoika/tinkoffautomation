@@ -7,7 +7,7 @@ public abstract class Application {
 
     protected String url = "";
     protected boolean isApplicationOpened = false;
-    private WebDriver webdriver = new DriverFactory().getInstance();
+    private WebDriver webdriver = DriverFactory.getInstance();
 
     public Application(String url) {
         this.url = url;
@@ -39,7 +39,6 @@ public abstract class Application {
 
     private void closeSession() {
         webdriver.quit();
-
     }
 
     private void setApplicationOpened(boolean status) {

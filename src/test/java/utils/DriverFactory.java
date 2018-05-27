@@ -6,7 +6,7 @@ public class DriverFactory {
 
     private static WebDriver driver;
 
-    public WebDriver getInstance() {
+    public static WebDriver getInstance() {
         if (driver == null) {
             driver = getDriver();
         }
@@ -14,7 +14,7 @@ public class DriverFactory {
     }
 
 
-    public WebDriver getDriver() {
+    public static WebDriver getDriver() {
         String driverType = PropertyProvider.getProperty(CustomProperties.BrowserProperties.BROWSER_TYPE).toLowerCase();
 
         switch (driverType) {

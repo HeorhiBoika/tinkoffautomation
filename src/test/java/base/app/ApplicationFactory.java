@@ -15,7 +15,6 @@ public class ApplicationFactory {
 
     public MainApplication mainApp() {
         return mainApplication;
-
     }
 
 }
