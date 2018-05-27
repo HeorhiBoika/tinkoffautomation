@@ -1,9 +1,8 @@
 package com.gmail.hboika;
 
-import base.app.ApplicationFactory;
-import base.app.MainApplication;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
+import utils.ApplicationUtils;
 import utils.DataManager;
 import utils.DriverFactory;
 
@@ -11,12 +10,10 @@ public class BaseTest {
     protected DataManager dataManager = new DataManager();
     protected WebDriver driver = DriverFactory.getInstance();
 
-    protected MainApplication mainApp() {
-        return ApplicationFactory.get().mainApp();
-    }
 
-    public void open() {
-
+    protected void open() {
+           driver.get(ApplicationUtils.formatURL());
+           driver.manage().window().maximize();
     }
 
     @AfterMethod(alwaysRun = true)

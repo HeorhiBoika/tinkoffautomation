@@ -1,7 +1,4 @@
-package base.utils;
-
-import utils.CustomProperties;
-import utils.PropertyProvider;
+package utils;
 
 public class ApplicationUtils {
 
