@@ -2,18 +2,22 @@ package com.gmail.hboika;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
+import pages.AbstractPage;
+import pages.MainPage;
 import utils.ApplicationUtils;
 import utils.DataManager;
 import utils.DriverFactory;
 
 public class BaseTest {
-    protected DataManager dataManager = new DataManager();
-    protected WebDriver driver = DriverFactory.getInstance();
+    DataManager dataManager = new DataManager();
+    private WebDriver driver = DriverFactory.getInstance();
+//    AbstractPage mainPage;
 
 
-    protected void open() {
-           driver.get(ApplicationUtils.formatURL());
-           driver.manage().window().maximize();
+    protected MainPage open() {
+        driver.get(ApplicationUtils.formatURL());
+        driver.manage().window().maximize();
+        return new MainPage(driver);
     }
 
     @AfterMethod(alwaysRun = true)
