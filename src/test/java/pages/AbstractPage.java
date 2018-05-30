@@ -19,8 +19,8 @@ public abstract class AbstractPage {
         driver.findElement(By.xpath(String.format(xpathMainTab, nameTab))).click();
     }
 
-    protected WebElement expectedWait(By element) {
-       return  new WebDriverWait(driver, 5, 5000).until(ExpectedConditions.visibilityOf(driver.findElement(element)));
+    protected WebElement expectedVisibilityOfElementLocated(By element) {
+       return  new WebDriverWait(driver, 5, 50000).until(ExpectedConditions.visibilityOf(driver.findElement(element)));
     }
 
 }
